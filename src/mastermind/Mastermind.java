@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Mastermind {
 
 	public static void main(String[] args) {
-//dit is een test voor github
+
 		System.out.println("welkom bij mastermind" + "         gebruik vier kleuren");
 
 //rood, blauw , groen , oranje , zwart , wit , paars, geel
