@@ -10,6 +10,7 @@ public class Mastermind {
 
 //rood, blauw , groen , oranje , zwart , wit , paars, geel
 //code kraker
+		
 		String green = "green";
 		String red = "red";
 		String yellow = "yellow";
@@ -19,7 +20,7 @@ public class Mastermind {
 		String purple = "purple";
 		String orange = "orange";
 
-		// make code
+		 //make code
 		String code1 = green;
 		String code2 = blue;
 		String code3 = blue;
