@@ -10,8 +10,8 @@ public class Mastermind {
 
 		System.out.println("welcome to mastermind" + "use four colors");
 		Scanner sc = new Scanner(System.in);
-//rood, blauw , groen , oranje , zwart , wit , paars, geel
-//code kraker
+//red, blue , green , orange, purple, yellow
+//code kraker's kleuren om te gebruiken
 		ArrayList<String> color = new ArrayList<String>();
 		color.add("green");
 		color.add("blue");
@@ -22,15 +22,15 @@ public class Mastermind {
 		color.add("black");
 		color.add("white");
 
-		// make code
-
+		//my random with name 
 		Random rand = new Random();
-
+		// make code
 		String code1 = color.get(rand.nextInt(6));
 		String code2 = color.get(rand.nextInt(6));
 		String code3 = color.get(rand.nextInt(6));
 		String code4 = color.get(rand.nextInt(6));
 
+		//if u lost a round then it loses a round and u have to try it again.
 		boolean Won = false;
 		for (int guess = 10; guess > 0; guess--) {
 
@@ -81,14 +81,17 @@ public class Mastermind {
 			System.out.println("check: " + guesses[0] + " " + guesses[1] + " " + guesses[2] + " " + guesses[3] + " : "
 					+ checks[0] + " " + checks[1] + " " + checks[2] + " " + checks[3]);
 
+			//checks if all colors are black
 			if (checks[0].equals(color.get(6)) && checks[1].equals(color.get(6)) && checks[2].equals(color.get(6))
 					&& checks[3].equals(color.get(6))) {
+				//if u won Mastermind then it says this and it closes automatically 
 				System.out.println("you won the mastermind game");
 				Won = true;
 				guess = 0;
 			}
 
 		}
+		//if u lost Mastermind then it says "you lost" and then it closes the scanner if all rounds all gone (10x) 
 		if (Won == false) {
 			System.out.println("You lost");
 			sc.close();
