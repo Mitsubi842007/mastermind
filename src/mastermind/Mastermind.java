@@ -66,7 +66,7 @@ public class Mastermind {
 				checks[2] = color.get(7);
 			}
 			// guess 4
-			if (guessCode[3].equalsIgnoreCase(codes[3])) {
+			if (guessCode[3].equalsIgnoreCase(codes[3])) {	
 				checks[3] = color.get(6);
 			} else if (guessCode[3].equalsIgnoreCase(codes[1]) || guessCode[3].equalsIgnoreCase(codes[2])
 					|| guessCode[3].equalsIgnoreCase(codes[0])) {
@@ -82,6 +82,7 @@ public class Mastermind {
 				// if u won Mastermind then it says this and it closes the scanner automatically
 				// same at lost
 				System.out.println("you won the mastermind game");
+				System.out.println("Good job :D");
 				Won = true;
 				guess = 0;
 			}
@@ -90,9 +91,15 @@ public class Mastermind {
 		// if u lost Mastermind then it says "you lost" and then it closes the scanner
 		// if all rounds all gone (10x)
 		if (Won == false) {
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
 			System.out.println("You lost");
+	
 			// your code will be shown when u lost or win
-			System.out.println(codes[0] + " " + codes[1] + " " + codes[2] + " " + codes[3]);
+			System.out.println("Your code was -->" + " " + codes[0] + " " + codes[1] + " " + codes[2] + " " + codes[3]);
 		}
 		sc.close();
 
