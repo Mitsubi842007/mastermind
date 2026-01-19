@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Helper {
-Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 	String[] colors = { "green", "blue", "red", "orange", "purple", "yellow" };
 
 	public String[] createCode() {
@@ -30,4 +30,7 @@ Scanner sc = new Scanner(System.in);
 
 	}
 
+	{
+
+	}
 }

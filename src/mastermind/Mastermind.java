@@ -21,6 +21,7 @@ public class Mastermind {
 		color.add("black");
 		color.add("white");
 		Helper helper = new Helper();
+
 		// make code
 		String codes[] = helper.createCode();
 
@@ -33,11 +34,7 @@ public class Mastermind {
 
 			// code Guess
 
-			String[] guessCode = helper.guessCode(); // = new String[4];
-//
-//			for (int i = 0; i < guessCode.length; i++) {
-//				guessCode[i] = sc.next();
-//			}
+			String[] guessCode = helper.guessCode();
 
 			// code check
 			String[] checks = { "...", "...", "...", "..." };
@@ -45,7 +42,7 @@ public class Mastermind {
 
 			}
 			// guess 1
-			if (guessCode[0].equalsIgnoreCase(codes[0])) {	
+			if (guessCode[0].equalsIgnoreCase(codes[0])) {
 				checks[0] = color.get(6);
 			} else if (guessCode[0].equalsIgnoreCase(codes[1]) || guessCode[0].equalsIgnoreCase(codes[2])
 					|| guessCode[0].equalsIgnoreCase(codes[3])) {
@@ -66,7 +63,7 @@ public class Mastermind {
 				checks[2] = color.get(7);
 			}
 			// guess 4
-			if (guessCode[3].equalsIgnoreCase(codes[3])) {	
+			if (guessCode[3].equalsIgnoreCase(codes[3])) {
 				checks[3] = color.get(6);
 			} else if (guessCode[3].equalsIgnoreCase(codes[1]) || guessCode[3].equalsIgnoreCase(codes[2])
 					|| guessCode[3].equalsIgnoreCase(codes[0])) {
@@ -81,6 +78,11 @@ public class Mastermind {
 					&& checks[3].equals(color.get(6))) {
 				// if u won Mastermind then it says this and it closes the scanner automatically
 				// same at lost
+				
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("");
 				System.out.println("you won the mastermind game");
 				System.out.println("Good job :D");
 				Won = true;
@@ -97,7 +99,7 @@ public class Mastermind {
 			System.out.println("");
 			System.out.println("");
 			System.out.println("You lost");
-	
+
 			// your code will be shown when u lost or win
 			System.out.println("Your code was -->" + " " + codes[0] + " " + codes[1] + " " + codes[2] + " " + codes[3]);
 		}
