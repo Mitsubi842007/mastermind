@@ -70,9 +70,7 @@ public class Mastermind {
 				checks[3] = color.get(7);
 			}
 
-			System.out.println("check: " + guessCode[0] + "  " + guessCode[1] + "  " + guessCode[2] + "  "
-					+ guessCode[3] + " : " + checks[0] + "  " + checks[1] + "  " + checks[2] + "  " + checks[3]);
-
+			helper.wonCode(checks, guessCode);
 			// checks if all colors are black
 			if (checks[0].equals(color.get(6)) && checks[1].equals(color.get(6)) && checks[2].equals(color.get(6))
 					&& checks[3].equals(color.get(6))) {
@@ -87,17 +85,14 @@ public class Mastermind {
 				System.out.println("Good job :D");
 				Won = true;
 				guess = 0;
+			
 			}
 
 		}
 		// if u lost Mastermind then it says "you lost" and then it closes the scanner
 		// if all rounds all gone (10x)
 		if (Won == false) {
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
-			System.out.println("");
+			System.out.println("\n \n \n \n");
 			System.out.println("You lost");
 
 			// your code will be shown when u lost or win
