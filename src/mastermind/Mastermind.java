@@ -70,10 +70,9 @@ public class Mastermind {
 				checks[3] = color.get(7);
 			}
 
-			helper.wonCode(checks, guessCode);
+			boolean wonCode = helper.wonCode(checks, guessCode);
 			// checks if all colors are black
-			if (checks[0].equals(color.get(6)) && checks[1].equals(color.get(6)) && checks[2].equals(color.get(6))
-					&& checks[3].equals(color.get(6))) {
+			if (wonCode) {
 				// if u won Mastermind then it says this and it closes the scanner automatically
 				// same at lost
 				
